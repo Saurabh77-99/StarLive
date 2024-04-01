@@ -1,0 +1,25 @@
+Chrome browser --> Camera turn on --> start streaming button -> RTMP    
+
+stream --> sended to --> NodeJS server (child process) that runs CLI ffmpeg tools
+for any type of video-processing --> ffmpeg is tool.--> to given RTMP points
+
+RTMP -> Real time messaging protocol 
+
+yt live streaming --> thrown to --> RTMP of yt server
+
+### How does RTMP works?
+
+capture -> encoding -> processing -> playback
+
+Stream videos form one to another we need UDP / WEBRTC protocol
+
+RTMP is a TCP protocol.
+User stream -> convert to -> binary data 
+so that over TCP protocol, the stream is sended to nodejs server , and by ffmpeg the binary data is thrown to RTMP server.
+
+For this communication, to send binary data to NodeJS server , it can be done by socket.io or web sockets.
+
+-------
+
+we can't throw media stream on RTMP.
+we need to convert it to binary data.
